@@ -1,0 +1,63 @@
+baseURL = 'https://example.org/'
+locale = 'zh-CN'
+defaultContentLanguage = 'zh'
+title = '我的博客'
+theme = 'PaperMod'
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 5
+
+[params]
+  env = 'production'
+  description = '记录一些东西'
+  author = '你的名字'
+  defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  UseHugoToc = true
+
+[params.homeInfoParams]
+  Title = '你好，我是……'
+  Content = '''
+这里写一两句自我介绍。
+'''
+
+[[params.socialIcons]]
+  name = 'github'
+  url = 'https://github.com/yourname'
+
+[menu]
+  [[menu.main]]
+    identifier = 'posts'
+    name = '文章'
+    url = '/posts/'
+    weight = 10
+  [[menu.main]]
+    identifier = 'archives'
+    name = '归档'
+    url = '/archives/'
+    weight = 20
+  [[menu.main]]
+    identifier = 'search'
+    name = '搜索'
+    url = '/search/'
+    weight = 30
+  [[menu.main]]
+    identifier = 'tags'
+    name = '标签'
+    url = '/tags/'
+    weight = 40
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
