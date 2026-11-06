@@ -1,7 +1,7 @@
 baseURL = 'https://dlcnatsuki.top/'
 locale = 'zh-CN'
 defaultContentLanguage = 'zh'
-title = '我的博客'
+title = 'DLCNatsuki的主页'
 theme = 'PaperMod'
 enableRobotsTXT = true
 
@@ -11,7 +11,7 @@ enableRobotsTXT = true
 [params]
   env = 'production'
   description = '记录一些东西'
-  author = '你的名字'
+  author = 'DLCNatsuki'
   defaultTheme = 'auto'
   ShowReadingTime = true
   ShowShareButtons = false
@@ -22,9 +22,9 @@ enableRobotsTXT = true
   UseHugoToc = true
 
 [params.homeInfoParams]
-  Title = '你好，我是……'
+  Title = '你好，我是DLCNatsuki(夏木)'
   Content = '''
-这里写一两句自我介绍。
+这个人很懒，还什么都没写……
 '''
 
 [[params.socialIcons]]
