@@ -1,7 +1,7 @@
 baseURL = 'https://dlcnatsuki.top/'
 locale = 'zh-CN'
 defaultContentLanguage = 'zh'
-title = 'DLCNatsuki的主页'
+title = 'DLCNatsuki的PRTS终端'
 theme = 'PaperMod'
 enableRobotsTXT = true
 
