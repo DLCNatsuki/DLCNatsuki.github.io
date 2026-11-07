@@ -42,6 +42,10 @@ enableRobotsTXT = true
   name = 'bilibili'
   url = 'https://space.bilibili.com/1263902667'
 
+[[params.socialIcons]]
+  name = 'mail'
+  url = 'mailto:3169934626@qq.com'
+
 [menu]
   [[menu.main]]
     identifier = 'posts'
