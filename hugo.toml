@@ -36,7 +36,7 @@ enableRobotsTXT = true
 
 [[params.socialIcons]]
   name = 'github'
-  url = 'https://github.com/yourname'
+  url = 'https://github.com/DLCNatsuki'
 
 [menu]
   [[menu.main]]
