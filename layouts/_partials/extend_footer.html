@@ -1,0 +1,42 @@
+{{/* 左侧抽屉菜单：按钮 + 遮罩 + 抽屉 */}}
+<button id="drawer-toggle" class="drawer-toggle" type="button" aria-label="打开菜单">☰</button>
+<div id="drawer-mask" class="drawer-mask"></div>
+
+<aside id="drawer" class="drawer" aria-hidden="true">
+  <div class="drawer-title">导航</div>
+  <nav class="drawer-nav">
+    {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+  </nav>
+</aside>
+
+<script>
+(function () {
+  var toggle = document.getElementById('drawer-toggle');
+  var drawer = document.getElementById('drawer');
+  var mask   = document.getElementById('drawer-mask');
+
+  function open() {
+    drawer.classList.add('open');
+    mask.classList.add('open');
+    drawer.setAttribute('aria-hidden', 'false');
+  }
+  function close() {
+    drawer.classList.remove('open');
+    mask.classList.remove('open');
+    drawer.setAttribute('aria-hidden', 'true');
+  }
+
+  toggle.addEventListener('click', function () {
+    drawer.classList.contains('open') ? close() : open();
+  });
+  mask.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') close();
+  });
+  drawer.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', close);
+  });
+})();
+</script>

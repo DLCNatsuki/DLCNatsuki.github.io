@@ -1,0 +1,69 @@
+/* 触发按钮：固定在左下角，避开顶部导航 */
+.drawer-toggle {
+  position: fixed;
+  left: 16px;
+  bottom: 24px;
+  z-index: 1001;
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--entry);
+  color: var(--primary);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .15);
+  transition: transform .2s ease;
+}
+.drawer-toggle:hover { transform: scale(1.06); }
+
+/* 抽屉 */
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100%;
+  z-index: 1003;
+  padding: 24px 18px;
+  overflow-y: auto;
+  background: var(--entry);
+  border-right: 1px solid var(--border);
+  transform: translateX(-100%);
+  transition: transform .25s ease;
+}
+.drawer.open { transform: translateX(0); }
+
+.drawer-title {
+  font-size: 12px;
+  letter-spacing: .12em;
+  color: var(--secondary);
+  margin-bottom: 14px;
+}
+
+.drawer-nav a {
+  display: block;
+  padding: 10px 10px;
+  margin-bottom: 2px;
+  border-radius: 8px;
+  color: var(--primary);
+  font-size: 15px;
+  text-decoration: none;
+}
+.drawer-nav a:hover { background: var(--code-bg); }
+
+/* 遮罩 */
+.drawer-mask {
+  position: fixed;
+  inset: 0;
+  z-index: 1002;
+  background: rgba(0, 0, 0, .45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+}
+.drawer-mask.open {
+  opacity: 1;
+  pointer-events: auto;
+}
