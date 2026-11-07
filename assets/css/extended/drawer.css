@@ -1,22 +1,27 @@
-/* 触发按钮：固定在左下角，避开顶部导航 */
+/* 头部按钮：常驻在主标题左侧 */
+.header-nav { align-items: center; }
+.logo { column-gap: .5rem; }
+.logo-switches { margin-left: auto; }
+
 .drawer-toggle {
-  position: fixed;
-  left: 16px;
-  bottom: 24px;
-  z-index: 1001;
-  width: 46px;
-  height: 46px;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-right: 2px;
+  padding: 0;
   border: 1px solid var(--border);
-  border-radius: 50%;
-  background: var(--entry);
+  border-radius: 8px;
+  background: transparent;
   color: var(--primary);
-  font-size: 20px;
+  font-size: 17px;
   line-height: 1;
   cursor: pointer;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, .15);
-  transition: transform .2s ease;
+  transition: background .2s ease, border-color .2s ease;
 }
-.drawer-toggle:hover { transform: scale(1.06); }
+.drawer-toggle:hover { background: var(--code-bg); border-color: var(--secondary); }
 
 /* 抽屉 */
 .drawer {
