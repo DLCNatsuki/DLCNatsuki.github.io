@@ -38,6 +38,10 @@ enableRobotsTXT = true
   name = 'github'
   url = 'https://github.com/DLCNatsuki'
 
+[[params.socialIcons]]
+  name = 'bilibili'
+  url = 'https://space.bilibili.com/1263902667'
+
 [menu]
   [[menu.main]]
     identifier = 'posts'
