@@ -1,4 +1,4 @@
-/* 头部按钮：常驻在主标题左侧 */
+﻿/* 头部按钮：常驻在主标题左侧 */
 .header-nav { align-items: center; }
 .logo { column-gap: .5rem; }
 .logo-switches { margin-left: auto; }
@@ -81,3 +81,4 @@
   transition: transform .2s ease;
 }
 .logo a:hover img { transform: scale(1.08); }
+
