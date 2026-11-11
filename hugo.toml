@@ -21,6 +21,10 @@ enableRobotsTXT = true
   ShowWordCount = true
   UseHugoToc = true
 
+[params.label]
+  icon = 'avatar.jpg'
+  iconHeight = 36
+
 [params.homeInfoParams]
   Title = '你好，我是DLCNatsuki(夏木)'
   Content = '''
