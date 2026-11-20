@@ -1,0 +1,123 @@
+# ============================================================
+#  Hugo + PaperMod 完整配置示例
+#  复制到项目根目录，把 example.com / 你的用户名 换掉即可
+# ============================================================
+
+baseURL = 'https://example.com/'
+locale = 'zh-cn'
+defaultContentLanguage = 'zh'
+title = '我的博客'
+theme = 'PaperMod'
+enableRobotsTXT = true
+hasCJKLanguage = true
+
+# 分页
+[pagination]
+  pagerSize = 5
+
+# ---------------- 基本参数 ----------------
+[params]
+  env = 'production'
+  description = '记录一些东西'
+  author = '你的名字'
+  defaultTheme = 'auto'          # auto / light / dark
+  disableThemeToggle = false
+
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+
+  # 文章页目录
+  ShowToc = true
+  TocOpen = false
+
+  # 首页信息
+  [params.homeInfoParams]
+    Title = '你好，我是 XXX'
+    Content = '''
+这里写自我介绍，支持 **Markdown**。
+
+可以写多段，也可以放链接。
+'''
+
+  # 站点图标
+  [params.assets]
+    favicon = '/favicon.ico'
+
+  # 标题旁头像（放到 assets/avatar.png）
+  [params.label]
+    icon = 'avatar.png'
+    iconHeight = 36
+
+# ---------------- 社交图标 ----------------
+[[params.socialIcons]]
+  name = 'github'
+  url = 'https://github.com/你的用户名'
+
+[[params.socialIcons]]
+  name = 'mail'
+  url = 'mailto:你的邮箱@example.com'
+
+# 可选：bilibili / zhihu / rss / twitter / linkedin
+# [[params.socialIcons]]
+#   name = 'bilibili'
+#   url = 'https://space.bilibili.com/你的UID'
+
+# ---------------- 菜单 ----------------
+[menu]
+  [[menu.main]]
+    identifier = 'posts'
+    name = '文章'
+    url = '/posts/'
+    weight = 10
+
+  [[menu.main]]
+    identifier = 'archives'
+    name = '归档'
+    url = '/archives/'
+    weight = 20
+
+  [[menu.main]]
+    identifier = 'search'
+    name = '搜索'
+    url = '/search/'
+    weight = 30
+
+  [[menu.main]]
+    identifier = 'tags'
+    name = '标签'
+    url = '/tags/'
+    weight = 40
+
+# ---------------- 输出格式（搜索需要 JSON）----------------
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# ---------------- Markdown 渲染 ----------------
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true             # 允许内嵌 HTML（iframe、视频等）
+
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+    codeFences = true
+    guessSyntax = true
+
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+
+# ---------------- 评论（可选，见 09 章）----------------
+# [params.giscus]
+#   repo = '用户名/仓库名'
+#   repoId = 'R_kgDOxxxx'
+#   category = 'Announcements'
+#   categoryId = 'DIC_kwDOxxxx'
+#   mapping = 'pathname'
+#   lang = 'zh-CN'
